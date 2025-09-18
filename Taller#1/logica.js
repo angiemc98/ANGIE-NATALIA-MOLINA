@@ -38,7 +38,7 @@ for (let i = 1; i <= cantidad; i++) {
     
     //Verificar si es miercoles y aplicar descuento de 50%
     if (dia === "miércoles" || dia === "miercoles") {
-        precio = precio * 0.5;
+        precio = precio * 0.85;
     }
 
     //Contador para el Total a pagar
