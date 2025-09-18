@@ -1,0 +1,2 @@
+SITUACIÓN PROBLEMA:
+Un cine necesita un programa que calcule el costo total de las entradas vendidas según la edad del cliente, el día de la semana y la cantidad de entradas que desea comprar.
