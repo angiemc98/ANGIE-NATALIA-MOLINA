@@ -1,0 +1,28 @@
+### 🔹 Actualizar un usuario específico por ID
+PUT http://localhost:3000/usuario/1
+Content-Type: application/json
+
+{
+    "nombre": "Juan Gomez Daza",
+    "edad": 30,
+    "email": "juan@example.com"
+}
+### 🔹 Actualizar un usuario sin especificar ID en la URL
+PUT http://localhost:3000/usuario
+Content-Type: application/json
+
+{
+    "nombre": "Ana Perez",
+    "edad": 28,
+    "email": "ana@example.com"
+}
+### 🔹 Eliminar un usuario por su ID
+DELETE http://localhost:3000/usuario/1
+
+### 🔹 Eliminar varios usuarios al mismo tiempo
+DELETE http://localhost:3000/usuario
+Content-Type: application/json
+
+{
+    "ids": [2, 3, 4]
+}

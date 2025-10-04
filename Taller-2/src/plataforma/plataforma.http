@@ -1,0 +1,37 @@
+### 1️⃣ Listar todas las plataformas
+GET http://localhost:3000/plataformas
+Content-Type: application/json
+
+###
+
+### 2️⃣ Ver juegos de una plataforma (ID=2)
+GET http://localhost:3000/plataformas/2/juegos
+Content-Type: application/json
+
+###
+
+### 3️⃣ Crear una nueva plataforma
+POST http://localhost:3000/plataformas
+Content-Type: application/json
+
+{
+  "nombre": "Xbox Series X",
+  "fabricante": "Microsoft"
+}
+
+###
+
+### 4️⃣ Actualizar una plataforma existente (ID=1)
+PUT http://localhost:3000/plataformas/1
+Content-Type: application/json
+
+{
+  "nombre": "PC Gaming",
+  "fabricante": "Microsoft"
+}
+
+###
+
+### 5️⃣ Eliminar una plataforma (ID=1)
+DELETE http://localhost:3000/plataformas/1
+Content-Type: application/json

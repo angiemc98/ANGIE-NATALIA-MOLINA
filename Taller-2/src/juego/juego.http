@@ -1,0 +1,51 @@
+###  Crea un nuevo juego usando el DTO con validación automática
+POST http://localhost:3000/juego
+Content-Type: application/json
+
+{
+  "nombre": "FIFA 23",
+  "genero": "Deportes",
+  "idPlataforma": 1,
+  "idDesarrollador": 1,
+  "precio": 59,
+  "fechaLanzamiento": "2022-09-27"
+}
+
+
+### Crea múltiples juegos (opcional)
+POST http://localhost:3000/juego/some
+Content-Type: application/json
+[
+    {
+        "id": 4,
+        "nombre": "The Legend of Zelda: Breath of the Wild",
+        "genero": "Aventura",
+        "idPlataforma": 2,
+        "precio": 59.99,
+        "fechaLanzamiento": "2017-03-03"
+    },
+    {
+        "id": 5,
+        "nombre": "God of War",
+        "genero": "Acción",
+        "idPlataforma": 3,
+        "precio": 49.99,
+        "fechaLanzamiento": "2018-04-20"
+    }
+]
+### Actualiza solo el nombre
+PATCH http://localhost:3000/juego/update-name
+Content-Type: application/json
+
+{
+    "id": 3,
+    "nombre": "FIFA 23 Ultimate Edition"
+}
+### Actualiza por ID usando Query params
+PATCH http://localhost:3000/juego/3?precio=49.99&genero=Deportes, Simulación
+
+### Buscar juegos por nombre
+GET http://localhost:3000/juego/search?nombre=FIFA 23 Ultimate Edition&genero=Deportes, Simulación&precioMin=30&precioMax=60
+
+## Listar todos los juegos o filtrar por precio máximo
+GET http://localhost:3000/juego?precioMax=80
